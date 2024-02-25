@@ -13,3 +13,6 @@ This repository contains my implementation of a simple CRM plus my notes on how 
     - Added `package.json` in the root folder
     - Run `npm i -D @ui5/cli`
     - Run `ui5 init`
+2. **Live reload:**
+    - Run `npm i ui5-middleware-livereload`
+    - Added `middleware` configuration to the `ui5.yaml`
