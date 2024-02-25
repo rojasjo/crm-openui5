@@ -20,3 +20,6 @@ This repository contains my implementation of a simple CRM plus my notes on how 
     - Run `ui5 use OpenUI5`
     - Run `ui5 add sap.ui.core sap.m themelib_sap_horizon``
     - Added `scripts` into `index.html`
+4. **Add default files:**
+    - modified the `index.html` to use the Component
+    - Added the `i18n`, App view and controller and adde properties to `manifest.json`
