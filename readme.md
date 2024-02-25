@@ -16,3 +16,7 @@ This repository contains my implementation of a simple CRM plus my notes on how 
 2. **Live reload:**
     - Run `npm i ui5-middleware-livereload`
     - Added `middleware` configuration to the `ui5.yaml`
+3. **Setup UI5 Tooling:**
+    - Run `ui5 use OpenUI5`
+    - Run `ui5 add sap.ui.core sap.m themelib_sap_horizon``
+    - Added `scripts` into `index.html`
