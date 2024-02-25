@@ -1,8 +1,8 @@
 {
     "_version": "1.58.0",
     "sap.app": {
-      "id": "crm",
-      "i18n": "i18n/i18n.properties",
+        "id": "crm",
+        "i18n": "i18n/i18n.properties",
         "title": "{{appTitle}}",
         "description": "{{appDescription}}",
         "type": "application",
@@ -17,29 +17,63 @@
             "tablet": true,
             "phone": true
         }
-      },
-      "sap.ui5": {
+    },
+    "sap.ui5": {
         "dependencies": {
-          "minUI5Version": "1.108.0",
-          "libs": {
-            "sap.ui.core": {},
-            "sap.m": {}
-          }
+            "minUI5Version": "1.108.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {}
+            }
         },
         "models": {
-          "i18n": {
-            "type": "sap.ui.model.resource.ResourceModel",
-            "settings": {
-              "bundleName": "crm.i18n.i18n",
-              "supportedLocales": [""],
-              "fallbackLocale": ""
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "crm.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                }
             }
-          }
         },
         "rootView": {
             "viewName": "crm.view.App",
             "type": "XML",
             "id": "app"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "crm.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "id": "overview",
+                    "name": "overview"
+                },
+                "detail": {
+                    "id": "detail",
+                    "name": "detail"
+                }
+            }
         }
-      }
-  }
+    }
+}

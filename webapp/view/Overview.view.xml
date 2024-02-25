@@ -1,0 +1,24 @@
+<mvc:View
+    controllerName="crm.controller.Overview"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Page title="{i18n>homePageTitle}">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo
+                rootRole="Region"
+                rootLabel="{i18n>Overview_rootLabel}"
+                contentRole="Main"
+                contentLabel="{i18n>Overview_contentLabel}"
+                headerRole="Banner"
+                headerLabel="{i18n>Overview_headerLabel}" />
+        </landmarkInfo>
+        <content>
+            <Button
+                id="navigateButton"
+                icon="sap-icon://arrow-right"
+                press=".onNavigatePressed"
+                class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop" />
+        </content>
+    </Page>
+</mvc:View>
